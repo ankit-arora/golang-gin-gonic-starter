@@ -9,3 +9,4 @@ logs
 .vscode
 go.work
 go.work.sum
+dist/
