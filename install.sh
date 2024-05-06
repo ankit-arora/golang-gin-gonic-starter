@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 installRunner (){
     install_runner_arm() {
