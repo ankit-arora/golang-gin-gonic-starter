@@ -13,8 +13,8 @@ builds:
     goarch:
       - amd64
       - arm64
-    binary: gin-server
-    id: gin-server
+    binary: gin-gonic-server
+    id: gin-gonic-server
     main: ./foo/main.go
     ldflags:
       - -s -w -X main.version={{.Version}}

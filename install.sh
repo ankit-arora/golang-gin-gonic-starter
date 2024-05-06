@@ -11,7 +11,7 @@ installRunner (){
         echo "Unsupported OS: $OS_NAME"
         return
       fi
-      sudo mkdir -p /usr/local/bin && sudo mv /tmp/runner /usr/local/bin/gin-gonic-server
+      sudo mkdir -p /usr/local/bin && sudo mv /tmp/gin-gonic-server /usr/local/bin/gin-gonic-server
     }
 
     install_runner_amd() {
@@ -32,6 +32,8 @@ installRunner (){
       install_runner_amd
     elif [ "$ARCH" = "aarch64" ]; then
       install_runner_arm
+    elif [ "$ARCH" = "arm64" ]; then
+          install_runner_arm
     else
       echo "Unsupported architecture: $ARCH"
       return
@@ -39,8 +41,3 @@ installRunner (){
 }
 
 installRunner
-
-if command -v gin-gonic-server &> /dev/null; then
-    gin-gonic-server example
-    rm install.sh
-fi
