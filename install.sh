@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 installRunner (){
     install_runner_arm() {
@@ -41,3 +41,7 @@ installRunner (){
 }
 
 installRunner
+
+if command -v gin-gonic-server &> /dev/null; then
+    rm install.sh
+fi
