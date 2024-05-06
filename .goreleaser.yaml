@@ -15,7 +15,9 @@ builds:
       - arm64
     binary: gin-server
     id: gin-server
-    main: ./main.go
+    main: ./foo/main.go
+    ldflags:
+      - -s -w -X main.version={{.Version}}
 
 archives:
   - format: tar.gz
