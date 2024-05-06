@@ -4,9 +4,9 @@ installRunner (){
     install_runner_arm() {
       OS_NAME="$(uname -s)"
       if [ "$OS_NAME" = "Linux" ]; then
-        curl --silent --location "https://github.com/deployment-io/runner/releases/latest/download/gin-gonic-server_linux_arm64.tar.gz" | tar xz -C /tmp
+        curl --silent --location "https://github.com/ankit-arora/golang-gin-gonic-starter/releases/latest/download/gin-gonic-server_linux_arm64.tar.gz" | tar xz -C /tmp
       elif [ "$OS_NAME" = "Darwin" ]; then
-        curl --silent --location "https://github.com/deployment-io/runner/releases/latest/download/gin-gonic-server_darwin_arm64.tar.gz" | tar xz -C /tmp
+        curl --silent --location "https://github.com/ankit-arora/golang-gin-gonic-starter/releases/latest/download/gin-gonic-server_darwin_arm64.tar.gz" | tar xz -C /tmp
       else
         echo "Unsupported OS: $OS_NAME"
         return
@@ -17,9 +17,9 @@ installRunner (){
     install_runner_amd() {
         OS_NAME="$(uname -s)"
         if [ "$OS_NAME" = "Linux" ]; then
-          curl --silent --location "https://github.com/deployment-io/runner/releases/latest/download/gin-gonic-server_linux_amd64.tar.gz" | tar xz -C /tmp
+          curl --silent --location "https://github.com/ankit-arora/golang-gin-gonic-starter/releases/latest/download/gin-gonic-server_linux_amd64.tar.gz" | tar xz -C /tmp
         elif [ "$OS_NAME" = "Darwin" ]; then
-          curl --silent --location "https://github.com/deployment-io/runner/releases/latest/download/gin-gonic-server_darwin_amd64.tar.gz" | tar xz -C /tmp
+          curl --silent --location "https://github.com/ankit-arora/golang-gin-gonic-starter/releases/latest/download/gin-gonic-server_darwin_amd64.tar.gz" | tar xz -C /tmp
         else
           echo "Unsupported OS: $OS_NAME"
           return
